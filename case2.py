@@ -269,6 +269,8 @@ fig = px.line(df, x='date', y='total_vaccinations', color = 'Region')
 covid_death_vac.rename(columns ={'total_vaccinations':'Total Vaccinations'},inplace = True)
 df = covid_death_vac.groupby('Country').agg({'Total Cases':'max','Total Vaccinations':'max',
                                         'Total Deaths':'max','Total Recovered':'max'})
+df1 = covid_manufac.groupby(["location", 'vaccine'])['total_vaccinations'].max().reset_index(name='Number of vaccinations')
+
 
 
 # In[ ]:
@@ -539,7 +541,7 @@ fig8.update_layout({'updatemenus':[{'type': "dropdown", 'x': 1.25,'y': 0.65,
 
 
 st.title('World Wide Covid')
-
+st.sidebar.title('Menu')
 
 # In[50]:
 
@@ -593,10 +595,21 @@ else :
     agree = st.sidebar.checkbox('See Table Overview Cases') 
     if agree: 
       st.dataframe(df)
+    agree = st.sidebar.checkbox('See Table Overview Manufacturers') 
+    if agree: 
+      st.dataframe(df1)
     
     st.markdown('This app is made by: Benjamin Niemann, Floor van de Meent, Maxim van Duin, Roy Pontman')
+    
+    st.markdown('**Bronnen**')
+    st.markdown('- https://www.kaggle.com/docs/api')
+    st.markdown('- https://www.kaggle.com/datasets/totoro29/covid19-cases-deaths')
+    st.markdown('- https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress')
+    st.markdown('- https://docs.streamlit.io/library/api-reference')
+    
 # # Bronnen
 
 # #API Kaggle aanmaken:
 # #- https://www.kaggle.com/docs/api
+
 # 
