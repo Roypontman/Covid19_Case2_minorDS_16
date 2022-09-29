@@ -19,7 +19,7 @@ import requests
 import plotly.express as px
 import missingno as msno
 #!pip install kaggle
-import kaggle
+#import kaggle
 #import os
 #!pip install streamlit
 import streamlit as st
