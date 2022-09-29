@@ -267,8 +267,8 @@ fig = px.line(df, x='date', y='total_vaccinations', color = 'Region')
 
 # In[36]:
 covid_death_vac.rename(columns ={'total_vaccinations':'Total Vaccinations'},inplace = True)
-df = covid_death_vac.groupby('Country').agg({'Total Cases':'sum','Total Vaccinations':'max',
-                                        'Total Deaths':'sum','Total Recovered':'sum'})
+df = covid_death_vac.groupby('Country').agg({'Total Cases':'max','Total Vaccinations':'max',
+                                        'Total Deaths':'max','Total Recovered':'max'})
 
 
 # In[ ]:
