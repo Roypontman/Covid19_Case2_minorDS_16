@@ -607,7 +607,7 @@ else :
     
     st.markdown('This app is made by: Benjamin Niemann, Floor van de Meent, Maxim van Duin, Roy Pontman')
     
-    st.markdown('**Bronnen**')
+    st.markdown('**Sources**')
     st.markdown('- https://www.kaggle.com/docs/api')
     st.markdown('- https://www.kaggle.com/datasets/totoro29/covid19-cases-deaths')
     st.markdown('- https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress')
