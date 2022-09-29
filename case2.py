@@ -562,8 +562,7 @@ elif st.sidebar.button('Cases', key = "6"):
     st.plotly_chart(fig3)
     st.plotly_chart(fig4)
     st.sidebar.button('Home',key = "7")
-    agree = st.checkbox('See table') 
-      if agree: st.dataframe(df['Total Cases'])
+    agree = st.checkbox('See table') if agree: st.dataframe(df['Total Cases'])
 elif st.sidebar.button('Deaths', key = "8"):
     st.header('Total Deaths')
     st.markdown('**Welcome to the Covid19 dashboard of total deaths**') 
