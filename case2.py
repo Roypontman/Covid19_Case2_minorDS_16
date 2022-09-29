@@ -540,8 +540,8 @@ fig8.update_layout({'updatemenus':[{'type': "dropdown", 'x': 1.25,'y': 0.65,
 # In[49]:
 st.title('World Wide Covid')
 st.sidebar.title('Menu')
-[theme]
-backgroundColor = '#273346'
+
+st.sidebar.backgroundColor = '#273346'
 
 
 # In[50]:
