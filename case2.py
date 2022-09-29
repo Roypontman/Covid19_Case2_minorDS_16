@@ -592,8 +592,7 @@ else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
     st.markdown('This dashboard is made to visualize every subject around the covid pandemic. On the left side of the screen are buttons to select a specific subject. Every subject has his own graphs and description.')
-
-
+    
 # # Bronnen
 
 # #API Kaggle aanmaken:
