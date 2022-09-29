@@ -16,7 +16,7 @@
 import pandas as pd
 import numpy as np
 import requests
-import plotly.express as px
+import plotly as px
 import missingno as msno
 #!pip install kaggle
 import kaggle
