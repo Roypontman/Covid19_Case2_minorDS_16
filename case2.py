@@ -437,7 +437,7 @@ vaccs = covid_death_vac['total_vaccinations_per_hundred']
 
 fig7 = px.scatter(covid_death_vac, x= cases, y= deaths, color = 'Region')
 fig7.update_layout(title="Total Deaths vs the Total Cases", )
-fig7.update_layout(xaxis_title="Total cases per 100k", yaxis_title="total Deaths per 100k", width=900, height=600, legend_title='Region')
+fig7.update_layout(xaxis_title="Total cases per 100k", yaxis_title=" Total Deaths per 100k", width=900, height=600, legend_title='Region')
 
 # In[46]:
 
@@ -566,7 +566,7 @@ elif st.sidebar.button('Cases', key = "6"):
     st.markdown('Here you can find some visualizations of total cases around the world, per region, per country and per 100.000 inhabitants')
     st.plotly_chart(fig3)
     st.plotly_chart(fig4)
-    st.sidebar.button('Home',key = "7")
+    st.sidebar.button('Return',key = "7")
 elif st.sidebar.button('Deaths', key = "8"):
     st.header('Total Deaths')
     st.markdown('**Welcome to the Covid19 dashboard of total deaths**') 
@@ -574,26 +574,26 @@ elif st.sidebar.button('Deaths', key = "8"):
     st.plotly_chart(fig5)
     st.plotly_chart(fig6)
     st.plotly_chart(fig7)
-    st.sidebar.button('Home',key = "9")
+    st.sidebar.button('Return',key = "9")
 elif st.sidebar.button('Vaccinations', key = "10"):
     st.header('Total Vaccinations')
     st.markdown('**Welcome to the Covid19 dashboard of total vaccinations**') 
     st.markdown('Here you can find some visualizations of total vaccinations around the world, per region, per country and per 100.000 inhabitants')
     st.plotly_chart(fig1)
     st.plotly_chart(fig2)
-    st.sidebar.button('Home',key = "11")
+    st.sidebar.button('Return',key = "11")
 elif st.sidebar.button('Recovered',key = "12"):
     st.header('Total Recovered')
     st.markdown('**Welcome to the Covid19 dashboard of total recovered people from covid19**') 
     st.markdown('Here you can find some visualizations of recovering form covid19 around the world, per region, per country and per 100.000 inhabitants')
     st.plotly_chart(fig8)
-    st.sidebar.button('Home', key = "13")
+    st.sidebar.button('Return', key = "13")
 elif st.sidebar.button('Manufactures',key = "14"):
     st.header('Total Manufacturers')
     st.markdown('**Welcome to the Covid19 dashboard of manufacturers**') 
     st.markdown('Here you can find some visualizations of manufacturers around the world, per region, per country and per 100.000 inhabitants')
     st.plotly_chart(fig9)
-    st.sidebar.button('Home', key = "15")
+    st.sidebar.button('Return', key = "15")
 else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
