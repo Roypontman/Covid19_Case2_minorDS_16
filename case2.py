@@ -431,9 +431,11 @@ fig6.update_layout({'updatemenus':[{'type': "dropdown",'x': 1.3,'y': 0.6,'showac
                           args=[{"yaxis.type": "log"}])]
 )]},height = 700, width = 1000)
 
+cases = covid_death_vac['Total Cases per 100k pop']
+deaths = covid_death_vac['Total Deaths per 100k pop']
+vaccs = covid_death_vac['total_vaccinations_per_hundred']
 
-
-fig7 = px.scatter(covid_death_vac, x=cases, y=deaths, trendline = "ols", color = 'Region')
+fig7 = px.scatter(covid_death_vac, x= cases, y= deaths, trendline = "ols", color = 'Region')
 fig7.update_layout(title="Total Deaths vs the Total Cases", )
 fig7.update_layout(xaxis_title="Total cases per 100k", yaxis_title="total Deaths per 100k", width=900, height=600, legend_title='Region')
 
