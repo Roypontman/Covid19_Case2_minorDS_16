@@ -562,7 +562,9 @@ elif st.sidebar.button('Cases', key = "6"):
     st.plotly_chart(fig3)
     st.plotly_chart(fig4)
     st.sidebar.button('Home',key = "7")
-    agree = st.checkbox('See table') if agree:    st.dataframe(df['Total Cases'])
+    agree = st.checkbox('See table') 
+      if agree:
+        st.dataframe(df['Total Cases'])
 elif st.sidebar.button('Deaths', key = "8"):
     st.header('Total Deaths')
     st.markdown('**Welcome to the Covid19 dashboard of total deaths**') 
@@ -593,44 +595,6 @@ else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
     st.markdown('This dashboard is made to visualize every subject around the covid pandemic. On the left side of the screen are buttons to select a specific subject. Every subject has his own graphs and description.')
-    #st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hva.nl%2F&psig=AOvVaw0KvpAwsfpcA3e0HekFiYFU&ust=1664534835998000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDS-c7pufoCFQAAAAAdAAAAABAE', caption = None)
-# Checkboxen
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # # Bronnen
