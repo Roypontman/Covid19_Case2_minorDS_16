@@ -29,8 +29,8 @@ import streamlit as st
 # In[2]:
 
 
-print(os.getcwd())
-dir(kaggle.api)
+#print(os.getcwd())
+#dir(kaggle.api)
 
 
 # # Datasets ophalen d.m.v API request
