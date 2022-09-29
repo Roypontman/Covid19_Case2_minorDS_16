@@ -591,7 +591,9 @@ else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
     st.markdown('This dashboard is made to visualize every subject around the covid pandemic. On the left side of the screen are buttons to select a specific subject. Every subject has his own graphs and description.')
-    agree = st.checkbox('See Table Overview') if agree : st.dataframe(df)
+    agree = st.sidebar.checkbox('See Table Overview') 
+    if agree: 
+      st.dataframe(df)
     
     st.markdown('This app is made by: Benjamin Niemann, Floor van de Meent, Maxim van Duin, Roy Pontman')
 # # Bronnen
