@@ -266,9 +266,8 @@ fig = px.line(df, x='date', y='total_vaccinations', color = 'Region')
 
 
 # In[36]:
-
-
-df = covid_death_vac.groupby('Country').agg({'Total Cases':'sum','total_vaccinations':'sum',
+covid_death_vac.rename(columns ={'total_vaccinations':'Total Vaccinations'},inplace = True)
+df = covid_death_vac.groupby('Country').agg({'Total Cases':'sum','Total Vaccinations':'sum',
                                         'Total Deaths':'sum','Total Recovered':'sum'})
 
 
@@ -591,7 +590,7 @@ else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
     st.markdown('This dashboard is made to visualize every subject around the covid pandemic. On the left side of the screen are buttons to select a specific subject. Every subject has his own graphs and description.')
-    agree = st.sidebar.checkbox('See Table Overview') 
+    agree = st.sidebar.checkbox('See Table Overview Cases') 
     if agree: 
       st.dataframe(df)
     
