@@ -20,10 +20,10 @@ import plotly.express as px
 import missingno as msno
 #!pip install kaggle
 import kaggle
-import os
+#import os
 #!pip install streamlit
 import streamlit as st
-from PIL import Image
+#from PIL import Image
 
 
 # In[2]:
@@ -592,7 +592,7 @@ else :
     st.header('Home')
     st.markdown('**Welcome to the Covid19 dashboard**') 
     st.markdown('This dashboard is made to visualize every subject around the covid pandemic. On the left side of the screen are buttons to select a specific subject. Every subject has his own graphs and description.')
-    st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hva.nl%2F&psig=AOvVaw0KvpAwsfpcA3e0HekFiYFU&ust=1664534835998000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDS-c7pufoCFQAAAAAdAAAAABAE', caption = None)
+    #st.image('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hva.nl%2F&psig=AOvVaw0KvpAwsfpcA3e0HekFiYFU&ust=1664534835998000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDS-c7pufoCFQAAAAAdAAAAABAE', caption = None)
 # Checkboxen
 
 
@@ -634,6 +634,6 @@ else :
 
 # # Bronnen
 
-# API Kaggle aanmaken:
-# - https://www.kaggle.com/docs/api
+# #API Kaggle aanmaken:
+# #- https://www.kaggle.com/docs/api
 # 
