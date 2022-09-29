@@ -433,12 +433,14 @@ fig6.update_layout({'updatemenus':[{'type': "dropdown",'x': 1.3,'y': 0.6,'showac
 
 
 
-
+fig7 = px.scatter(covid_death_vac, x=cases, y=deaths, trendline = "ols", color = 'Region')
+fig7.update_layout(title="Total Deaths vs the Total Cases", )
+fig7.update_layout(xaxis_title="Total cases per 100k", yaxis_title="total Deaths per 100k", width=900, height=600, legend_title='Region')
 
 # In[46]:
 
 
-fig7 = px.bar(covid_death, x = "Country" , y="Total Recovered" , color = "Region",title = 'All Regions', text = "Country")
+fig8 = px.bar(covid_death, x = "Country" , y="Total Recovered" , color = "Region",title = 'All Regions', text = "Country")
 
 dropdown_buttons = [  {'label': "All regions", 'method': "update",'args': [{"visible": [True, True, True, True, True, True, True]}, {'title': 'All Regions'}]}, 
                    {'label': 'Americas', 'method': 'update','args': [{'visible': [True, False, False, False, False, False, False]}, {'title': 'America'}]},  
@@ -450,7 +452,7 @@ dropdown_buttons = [  {'label': "All regions", 'method': "update",'args': [{"vis
                   ]
 
 
-fig7.update_layout({'updatemenus':[{'type': "dropdown",'x': 1.3,'y': 0.6,'showactive': True,'active': 0,'buttons': dropdown_buttons}, dict(
+fig8.update_layout({'updatemenus':[{'type': "dropdown",'x': 1.3,'y': 0.6,'showactive': True,'active': 0,'buttons': dropdown_buttons}, dict(
                  buttons=[
                      dict(label="Linear",  
                           method="relayout", 
@@ -472,11 +474,11 @@ covid_manufac1 = covid_manufac.groupby(["location", 'vaccine'])['total_vaccinati
 # In[48]:
 
 
-fig8 = px.bar(covid_manufac1, x = "location" , y="Aantal vacinaties", color = "vaccine")
+fig9 = px.bar(covid_manufac1, x = "location" , y="Aantal vacinaties", color = "vaccine")
 
  
 
-fig8.update_layout({'updatemenus':[{'type': "dropdown", 'x': 1.25,'y': 0.65,
+fig9.update_layout({'updatemenus':[{'type': "dropdown", 'x': 1.25,'y': 0.65,
             'buttons':list([
                 dict(label="All",
                      method="update",
@@ -569,6 +571,7 @@ elif st.sidebar.button('Deaths', key = "8"):
     st.markdown('Here you can find some visualizations of total deaths around the world, per region, per country and per 100.000 inhabitants')
     st.plotly_chart(fig5)
     st.plotly_chart(fig6)
+    st.plotly_chart(fig7)
     st.sidebar.button('Home',key = "9")
 elif st.sidebar.button('Vaccinations', key = "10"):
     st.header('Total Vaccinations')
@@ -581,13 +584,13 @@ elif st.sidebar.button('Recovered',key = "12"):
     st.header('Total Recovered')
     st.markdown('**Welcome to the Covid19 dashboard of total recovered people from covid19**') 
     st.markdown('Here you can find some visualizations of recovering form covid19 around the world, per region, per country and per 100.000 inhabitants')
-    st.plotly_chart(fig7)
+    st.plotly_chart(fig8)
     st.sidebar.button('Home', key = "13")
 elif st.sidebar.button('Manufactures',key = "14"):
     st.header('Total Manufacturers')
     st.markdown('**Welcome to the Covid19 dashboard of manufacturers**') 
     st.markdown('Here you can find some visualizations of manufacturers around the world, per region, per country and per 100.000 inhabitants')
-    st.plotly_chart(fig8)
+    st.plotly_chart(fig9)
     st.sidebar.button('Home', key = "15")
 else :
     st.header('Home')
