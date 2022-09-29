@@ -331,7 +331,7 @@ fig2 = px.choropleth(covid_vac_mean1, locations="iso_code",
 
 fig2.update_layout(
     title= 'Monthly average of vaccinated people per hundred inhabitants per country',
-    width=900, height=700,
+    width=950, height=700,
     titlefont={'size': 20}, paper_bgcolor= '#E6E6E6',
     plot_bgcolor= '#E6E6E6',
     legend_title = 'Monthly average vaccinations')
@@ -538,10 +538,11 @@ fig8.update_layout({'updatemenus':[{'type': "dropdown", 'x': 1.25,'y': 0.65,
 # # Blog in Streamlit
 
 # In[49]:
-
-
 st.title('World Wide Covid')
 st.sidebar.title('Menu')
+[theme]
+backgroundColor = '#273346'
+
 
 # In[50]:
 
